@@ -2,7 +2,7 @@ import { Container, Typography} from '@mui/material'
 import './App.css';
 import moment from 'moment'
 import CountrySelector from './CountrySelector/index'
-import CardHightLight from './HightLight/CardHightLight'
+import WrapCard from './HightLight/index'
 import React, { useEffect, useMemo } from 'react';
 import { getCountries, getReportByCountry } from './api';
 import { sortBy } from 'lodash';
@@ -49,7 +49,7 @@ const App = () => {
         },
         {
           title :' Tử vong',
-          count: latestData.Death,
+          count: latestData.Deaths,
           type: 'death'
         }
       ]
@@ -74,7 +74,7 @@ const App = () => {
         handleOnChange={handleOnChange}
         value={selectCountryId}
       ></CountrySelector>
-      <CardHightLight sumaryReport={sumaryReport}></CardHightLight>
+      <WrapCard sumaryReport={sumaryReport}></WrapCard>
     </Container>
   )
 }

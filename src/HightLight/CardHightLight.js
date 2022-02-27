@@ -6,8 +6,8 @@ const CardHightLight = ({ title, count, type }) => {
   return (
   <Card>
     <CardContent>
-      <Typography variant="h1" component='p'> { title }</Typography>
-      <Typography variant="h1" component='span'>
+      <Typography variant="h5" component='p'> { title }</Typography>
+      <Typography variant="h5" component='span'>
         <CountUp end={count} separator=' ' duration={2}></CountUp>
       </Typography>
     </CardContent>
